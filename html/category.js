@@ -138,6 +138,8 @@ const displayDetail = data =>{
    newsArea1.style.display="block";
    const newsArea2=document.getElementById("news-page2");
    newsArea2.style.display="block";
+   const newsArea3=document.getElementById("page-3");
+   newsArea3.style.display="block";
 
   })
 
