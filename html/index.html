@@ -19,22 +19,23 @@
    
 </head>
 <body>
-    <header class="container">
+    <header class="container" >
         <div>
             <nav class="navbar bg-light mt-4 mb-4">
                 <div class="container-fluid">
                   <a class="navbar-brand"> <span id="logo-name">SM  </span> <span id="font-c"> Online News</span></a>
                   <div class="d-flex" >
-                    <a href="http://127.0.0.1:5500/html/index.html#" class="me-5">News</a>
-                    <a href="http://127.0.0.1:5500/html/blog.html"  class="me-3 ">Blog</a>
+                    <a id="news-click" href="#" class="me-5">News</a>
+                    <a id="blog-click" href="#"  class="me-3 ">Blog</a>
                   </div>
                 </div>
             </nav>
 
             <hr>
         </div>
+      </header>
 
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-light" id="page-3">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div id="nav-list" class="d-flex flex-row">
@@ -45,9 +46,9 @@
           </nav>
        
      
-    </header>
+    
 
-   <section class="container mt-5">
+   <section class="container mt-5" id="news-page1">
     <div class="input-group mb-3">
       
       <input type="text" class="form-control" placeholder="How much found" aria-label="Example text with button addon" aria-describedby="button-addon1">
@@ -57,27 +58,55 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="container">
+    <section class="container" id="news-page2">
       <div id="detail-container" style="max-width: 1000px;" class="mt-5">
        
          
       </div>
+    </section>
+
+    <section class="container" id="blog-page">
+      
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Difference between var, let and const 
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">The scope of a var variable is functional scope. The scope of a let variable is block scope. The scope of a const variable is block scope. It can be updated and re-declared into the scope</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Differences Between Arrow and Regular Functions
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">1.1 Regular function
+                    Inside of a regular JavaScript function, this value (aka the execution context) is dynamic.
+                    
+                    The dynamic context means that the value of this depends on how the function is invoked. In JavaScript, there are 4 ways you can invoke a regular function. <br>1.2 Arrow function The behavior of this inside of an arrow function differs considerably from the regular function's this behavior. The arrow function doesn't define its own execution context.
+
+                    No matter how or where being executed, this value inside of an arrow function always equals this value from the outer function. In other words, the arrow function resolves this lexically.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Difference forEach, map, filter, and find  
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">The filter() method is used to filters all the elements and returns the element that matches and the element that do not match are removed. The only difference is the filter() method search through all the elements while find() method search through all the child elements only</div>
+              </div>
+            </div>
+            
+          </div>
+    
+
     </section>
 
     <script src="category.js"></script>

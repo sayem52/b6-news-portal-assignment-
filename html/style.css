@@ -35,3 +35,6 @@
 .mar-v{
     margin-left: 50px;
 }
+#blog-page{
+    display: none;
+}

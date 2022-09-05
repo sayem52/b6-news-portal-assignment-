@@ -101,5 +101,46 @@ const displayDetail = data =>{
  
        };
 
+  const blogB=document.getElementById("blog-click");
+   blogB.addEventListener("click", function(){
+   const newsArea1=document.getElementById("news-page1");
+    newsArea1.style.display="none";
+    const newsArea2=document.getElementById("news-page2");
+    newsArea2.style.display="none";
+
+    const newsArea3=document.getElementById("page-3");
+    newsArea3.style.display="none";
+
+    
+
+
+
+
+  const blogPage=document.getElementById("blog-page");
+  blogPage.style.display="block";
+
+
+  })
+
+
+  const newsB=document.getElementById("news-click");
+  newsB.addEventListener("click", function(){
+   const blogArea1=document.getElementById("blog-page");
+   blogArea1.style.display="none";
+    
+
+    
+
+
+
+
+   const newsArea1=document.getElementById("news-page1");
+   newsArea1.style.display="block";
+   const newsArea2=document.getElementById("news-page2");
+   newsArea2.style.display="block";
+
+  })
+
+
   
 
