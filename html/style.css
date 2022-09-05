@@ -16,3 +16,22 @@
 .card-m{
     margin-bottom: 15px;
 }
+
+#hover-add:hover {
+    background-color: rgb(42, 5, 179);
+  }
+.img-size{
+    height: 5%;
+    width: 5%;
+    
+}
+.img-fit{
+    height: 100%;
+}
+.pos{
+    float: left;
+  
+}
+.mar-v{
+    margin-left: 50px;
+}

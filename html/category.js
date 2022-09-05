@@ -1,8 +1,13 @@
 const loadUsers = (search) =>{
     const url= `https://openapi.programming-hero.com/api/news/${search}` ;
-    fetch(url)
-   .then(res => res.json())
-   .then(data => displayUser(data.data.news_category));
+    try{
+      fetch(url)
+      .then(res => res.json())
+      .then(data => displayUser(data.data.news_category));
+    }
+    catch (error){
+         console.log(error);
+    }
 }
 
 
@@ -15,8 +20,10 @@ data.forEach( category => {
    categoryNav.classList.add('navbar-nav');
    categoryNav.innerHTML=
    `
-   <a onclick="apiDetail('${category.category_id}')"  class="nav-link active" href="#">${category.category_name}</a>
+   <a onclick="apiDetail('${category.category_id}')"  class="nav-link active" id="hover-add" href="#">${category.category_name}</a>
+
    `
+   
      navContainer.appendChild(categoryNav);
 
 })
@@ -28,10 +35,15 @@ data.forEach( category => {
 
 const apiDetail = id =>{
    const url= `https://openapi.programming-hero.com/api/news/category/${id}`;
-   console.log(url);
+  try{
+     
    fetch(url)
    .then(res => res.json())
    .then(data => displayDetail(data.data))
+  }
+  catch (error){
+   console.log(error);
+  }
    
    };
 
@@ -50,14 +62,34 @@ const displayDetail = data =>{
        `
        <div class="row g-0">
             <div class="col-md-4">
-              <img src=${item.image_url} class="img-fluid rounded-start" alt="...">
+              <img src=${item.image_url} class="img-fluid rounded-start img-fit" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
                 <h5 class="card-title">${item.title}</h5>
                 <p class="card-text">${item.details.slice(0,200)}</p>
+                <img src="${item.author.img}" class="img-thumbnail img-size" alt="...">
+                      <div class="row align-items-end">
+                        <div class="col">
+                           
+                           <small >${item.author.name}</small> <br>
+                           <small>${item.author.published_date}</small>
+                        </div>
+                        <div class="col">
+                        <small> "views" ${item.total_view} </small>
+                        </div>
+                        <div class="col">
+                           <button>nxt</button>
+                        </div>
+                     </div>
+                
                 
               </div>
+            
+              <div class="mar-v"> 
+                 
+              </div>
+              
             </div>
         </div>
        `
