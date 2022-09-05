@@ -76,10 +76,10 @@ const displayDetail = data =>{
                            <small>${item.author.published_date}</small>
                         </div>
                         <div class="col">
-                        <small> "views" ${item.total_view} </small>
+                        <small> <i class="fa-regular fa-eye"></i> ${item.total_view} </small>
                         </div>
                         <div class="col">
-                           <button>nxt</button>
+                           <a><i class="fa-solid fa-arrow-right no-border"></i></a>
                         </div>
                      </div>
                 
